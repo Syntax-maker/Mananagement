@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management Dashboard UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="task-manager">
+      <!-- left bar starts -->
+      <div class="left-bar">
+        <div class="upper-part">
+          <div class="actions">
+            <div class="circle"></div>
+            <div class="circle-2"></div>
+          </div>
+        </div>
+      </div>
+      <!-- left bar ends -->
+
+      <!-- page content starts -->
+      <div class="page-content">
+        <div class="header">Task Management</div>
+
+        <!-- Task Form -->
+        <div class="task-form">
+          <form>
+            <label for="task-name">Task Name:</label>
+            <input type="text" id="task-name" name="task-name" />
+
+            
+            <button type="submit">Add Task</button>
+          </form>
+        </div>
+        <!-- End of Task Form -->
+        <!-- Task List Table -->
+        <table id="taskList">
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Task Name</th>
+              <th>Start Date</th>
+              <th>Due Date</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Task rows will be dynamically added here -->
+            <tr>
+              <td>Project 1</td>
+              <td>Task 1</td>
+              <td>2023-06-01</td>
+              <td>2023-06-10</td>
+              <td>Pending</td>
+              <td>
+                <button class="complete-button">Complete</button>
+                <button class="delete-button">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Project 2</td>
+              <td>Task 2</td>
+              <td>2023-06-05</td>
+              <td>2023-06-15</td>
+              <td>In Progress</td>
+              <td>
+                <button class="complete-button">Complete</button>
+                <button class="delete-button">Delete</button>
+              </td>
+            </tr>
+            <!-- More task rows can be added dynamically -->
+          </tbody>
+        </table>
+      
+
+        
+      </div>
+      <!-- page content ends -->
+
+      <!-- right bar starts -->
+      
+      <!-- right bar ends -->
+    </div>
+
+    <script src="script.js"></script>
+    <script src="db_connect.php"></script>
+
+  </body>
+</html>
